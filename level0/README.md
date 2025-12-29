@@ -1,48 +1,87 @@
+# Bandit Level 0
 
-===============================================================
-The Goal of this level is to connect to the badit SSH server 
-for the first time using the password and username provided 
-===============================================================
+## Objective
 
-domain
-bandit.labs.overthewire.org,
-Ip
-51.21.210.216
+The goal of this level is to connect to the Bandit SSH server for the first time using the provided username and password.
 
+---
 
-# WHAT I DID
--------------
+## Server Information
 
-Since I nned the ip Adress of the server before i canuse ssh tool oninux to onnect to the servier I wll ping the server soo i get ICMP echo response with the Ip addres in it 
+* **Domain:** `bandit.labs.overthewire.org`
+* **IP Address:** `51.21.210.216`
+* **SSH Port:** `2220`
 
-Now after getting the ip address of the server I need to connect to the server usingthe normal SSH method 
-Since i am giving the credentials 
+---
 
-on my first try to log in I get to relaiase that overthewire sepcified the port to connect to on SSH which is PORT 2220 not the defalt SSH port 22
-### syntaxt
-ssh username@target_ip
+## Approach
 
-TO specify whch port to conenct using ssh  I usethe -p argument
+To connect to the Bandit server, I first verified that the server was reachable by sending ICMP packets using the `ping` command. This confirmed that the host was online and accessible.
 
-ssh -p username@target_ip
+After confirming connectivity, I attempted to log in using SSH.
+On my first attempt, the connection failed because the default SSH port (`22`) was used.
 
-After logging in succesfully I will now try to find some files might probabilily fins soem files witht he flag in it  
+After reviewing the challenge instructions, I realized that OverTheWire uses a **custom SSH port (2220)**. Once I specified the correct port, the connection was successful.
 
-listed out all the file susing the command 
-ls -la
+---
 
-found reade file whoch reminds me of MR ROBOT 
+## Commands Used
 
-I READ the contnents of the file using the cat comand 
-cat readme
+### Ping the server
 
-and found a flag in it 
-FLAG : ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+```bash
+ping bandit.labs.overthewire.org
+```
 
+### Connect via SSH (with custom port)
 
-## credentials
---------------
+```bash
+ssh bandit0@bandit.labs.overthewire.org -p 2220
+```
 
-username : bandit0 
-password : bandit0
- 
+---
+
+## Finding the Flag
+
+After logging in successfully:
+
+1. I listed the contents of the home directory:
+
+   ```bash
+   ls -la
+   ```
+
+2. I found a file named `readme`.
+
+3. I displayed its contents using:
+
+   ```bash
+   cat readme
+   ```
+
+4. The file contained the password for the next level.
+
+---
+
+## Result
+
+**Flag:**
+
+```
+ZjLjTmM6FvvyRnrb2rfNWOZOTa6ip5If
+```
+
+---
+
+## Credentials Used
+
+* **Username:** `bandit0`
+* **Password:** `bandit0`
+
+---
+
+## Key Takeaways
+
+* Always check for custom SSH ports.
+* Basic Linux commands (`ls`, `cat`) are essential.
+* Reading instructions carefully prevents unnecessary mistakes.
