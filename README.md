@@ -3,15 +3,7 @@
 **Author:** Wsuits6
 **Project:** Bandit Wargame Walkthrough
 
-This repository documents my progress through the **OverTheWire Bandit** wargame. It focuses on understanding Linux fundamentals, file systems, permissions, and basic security concepts through hands-on practice.
-
-Each level contains:
-
-* A clear explanation of what was done
-* Commands used
-* Screenshots where helpful
-
-This is part of my cybersecurity learning journey.
+This repository documents my progress through the **OverTheWire Bandit** wargame. It focuses on learning Linux fundamentals, file systems, permissions, and basic security concepts through hands-on practice.
 
 ---
 
@@ -24,7 +16,6 @@ This is part of my cybersecurity learning journey.
 │   │   ├── flag-found.png
 │   │   ├── ping-domain.png
 │   │   ├── ssh-connect-fail.png
-│   │   ├── ssh-login-page.png
 │   │   └── succesful-login.png
 │   └── README.md
 ├── level1
@@ -51,34 +42,65 @@ This is part of my cybersecurity learning journey.
 
 ---
 
-## 📸 Image Usage
+## 📸 Visual Walkthrough
 
-Each level contains an `images/` directory used to visually document progress.
+Below are the images embedded directly from each level folder.
 
-Images are referenced directly inside each level’s `README.md` using relative paths, for example:
+---
 
-```md
-![Login Screen](./images/login.png)
-```
+### Level 0
 
-This keeps the documentation clean and portable.
+![SSH Login Page](./level0/images/ssh-login-page.png)
+![Successful Login](./level0/images/succesful-login.png)
+![Ping Domain](./level0/images/ping-domain.png)
+![File Listing](./level0/images/file-listing.png)
+![Flag Found](./level0/images/flag-found.png)
+
+---
+
+### Level 1
+
+![Login](./level1/images/login.png)
+![Dash File](./level1/images/dash-file.png)
+![Flag Found](./level1/images/flag-found.png)
+
+---
+
+### Level 2
+
+![List Files](./level2/images/list-files.png)
+![File Lists](./level2/images/file-lists.png)
+![Flag Found](./level2/images/flag-found.png)
+
+---
+
+### Level 3
+
+![Login](./level3/images/login.png)
+![Flag Found](./level3/images/flag-found.png)
+
+---
+
+### Level 4
+
+*(Images will be added once captured.)*
 
 ---
 
 ## 🧠 Learning Focus
 
 * Linux file systems
-* Permissions and ownership
 * Hidden files and directories
+* File permissions
 * Command-line navigation
-* Basic security concepts
+* Security awareness
 
 ---
 
 ## ✍️ Credit
 
-All walkthroughs, explanations, and documentation were created by **Wsuits6**.
+All documentation and walkthroughs were created by **Wsuits6**.
 
 ---
 
-If you’re reading this and learning too, good. That’s the whole point.
+This repository is part of my long-term cybersecurity learning journey.
